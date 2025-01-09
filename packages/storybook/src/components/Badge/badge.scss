@@ -1,0 +1,38 @@
+.badge {
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px; /* 밑줄 두께 */
+      background-color: currentColor; /* 글씨와 같은 색 */
+      transform: scaleY(2);
+      transform-origin: bottom;
+      z-index: -1; /* 밑줄이 글씨 뒤에 보이도록 설정 */
+      opacity: 0.3; /* 투명도 조절 */
+    }
+  
+    &.primary {
+      color: #000000; /* 기본 색 */
+    }
+  
+    &.success {
+      color: #001284; /* 성공 색 */
+    }
+  
+    &.warning {
+      color: #ffc107; /* 경고 색 */
+    }
+  
+    &.error {
+      color: #dc3545; /* 오류 색 */
+    }
+  }
+  

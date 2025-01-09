@@ -1,0 +1,78 @@
+.header {
+    background-color: white;  /* 배경을 흰색으로 */
+    color: black;  /* 글씨 색을 검정으로 */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;  /* 블로그 스타일 크기 */
+    margin: 0 auto;  /* 화면에 중앙 정렬 */
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;  /* 검정색 */
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    position: relative;  /* 부모 요소가 기준이 되도록 설정 */
+  }
+  
+  .nav-list a {
+    color: black;  /* 글씨 색을 검정으로 */
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 드롭다운 메뉴 스타일 */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0; /* left: 0 대신 right: 0 사용 */
+    background-color: #fcfcfc;
+    color: black;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    width: max-content;
+    display: none;
+    box-sizing: border-box;
+  }
+  
+  .dropdown-menu li {
+    padding: 4px 12px;
+  }
+  
+  .dropdown-menu li a {
+    color: black;  /* 글씨 색을 검정으로 */
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 드롭다운 메뉴가 보일 때 */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
