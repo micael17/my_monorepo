@@ -20,19 +20,20 @@
     }
   
     &.primary {
-      color: #000000; /* 기본 색 */
+      color: var(--color-black); /* 기본 색 */
     }
   
     &.success {
-      color: #001284; /* 성공 색 */
+      /* color: #001284; /* 성공 색 */
+      color: var(--color-navy)
     }
   
     &.warning {
-      color: #ffc107; /* 경고 색 */
+      color: var(--color-warning); /* 경고 색 */
     }
   
     &.error {
-      color: #dc3545; /* 오류 색 */
+      color: var(--color-error); /* 오류 색 */
     }
   }
   

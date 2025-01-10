@@ -5,17 +5,11 @@
 <script lang="ts" setup>
 import './button.scss';
 import { computed } from 'vue';
+import type { ButtonProps, ButtonEvents } from '@/types/button.types'
 
-const props = withDefaults(defineProps<{
-  label: string,
-  type?: string,
-  disabled?: boolean,
-  backgroundColor?: string,
-}>(), { type: 'primary' });
+const props = withDefaults(defineProps<ButtonProps>(), { type: 'primary' });
 
-const emit = defineEmits<{
-  (e: 'click', id: number): void;
-}>();
+const emit = defineEmits<ButtonEvents>();
 
 const classes = computed(() => ({
   [`button--${props.type}`]: true,

@@ -1,0 +1,41 @@
+.card {
+    background: white;
+    border: 1px solid #eaeaea;
+    padding: 1rem;
+    transition: transform 0.2s ease;
+  
+    &:hover {
+      transform: translateY(-2px);
+    }
+  
+    &-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  
+    &-content {
+      padding: 1rem 0;
+    }
+  
+    &-title {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem;
+    }
+  
+    &-date {
+      color: #666;
+      font-size: 0.875rem;
+    }
+  
+    &-description {
+      margin: 1rem 0;
+      line-height: 1.5;
+    }
+  
+    &-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+  }

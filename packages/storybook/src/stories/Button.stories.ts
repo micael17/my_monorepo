@@ -1,49 +1,46 @@
-import { fn } from '@storybook/test';
-import type { Meta, StoryObj } from '@storybook/vue3';
+// packages/storybook/src/stories/Button.stories.ts
+import type { Meta, StoryObj } from '@storybook/vue3'
+import Button from '@/components/ui/button/Button.vue'
 
-import Button from '../components/Button/Button.vue';
-
-const meta = {
-  title: 'Components/Button',
+const meta: Meta<typeof Button> = {
+  title: 'UI/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    type: { control: 'select', options: ['primary', 'secondary', 'outline']},
-    backgroundColor: { control: 'color' },
-  },
-  args: {
-    disabled: false,
-    onClick: fn(),
-  },
-} satisfies Meta<typeof Button>;
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'outline']
+    }
+  }
+}
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
-  args: {
-    type: 'primary',
-    label: 'Primary',
-  },
-};
+  render: () => ({
+    components: { Button },
+    template: '<Button variant="primary">Primary 버튼</Button>'
+  })
+}
 
 export const Secondary: Story = {
-  args: {
-    type: 'secondary',
-    label: 'Secondary',
-  },
-};
+  render: () => ({
+    components: { Button },
+    template: '<Button variant="secondary">Secondary 버튼</Button>'
+  })
+}
 
 export const Outline: Story = {
-  args: {
-    type: 'outline',
-    label: 'Outline',
-  },
-};
+  render: () => ({
+    components: { Button },
+    template: '<Button variant="outline">Outline 버튼</Button>'
+  })
+}
 
 export const Disabled: Story = {
-  args: {
-    label: 'Disabled',
-    disabled: true
-  },
-};
+  render: () => ({
+    components: { Button },
+    template: '<Button disabled>비활성화 버튼</Button>'
+  })
+}
